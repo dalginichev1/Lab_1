@@ -1,5 +1,0 @@
-if(EXISTS "/home/daalginichev/Lab1/build/test_closest_pair[1]_tests.cmake")
-  include("/home/daalginichev/Lab1/build/test_closest_pair[1]_tests.cmake")
-else()
-  add_test(test_closest_pair_NOT_BUILT test_closest_pair_NOT_BUILT)
-endif()

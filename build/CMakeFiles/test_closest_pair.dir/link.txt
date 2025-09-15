@@ -1,1 +1,0 @@
-/usr/bin/c++  -g -O0 CMakeFiles/test_closest_pair.dir/test/test_closest_pair.cpp.o CMakeFiles/test_closest_pair.dir/test/main.cpp.o -o test_closest_pair  libclosest_pair_lib.a lib/libgtest_main.a lib/libgtest.a 
