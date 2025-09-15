@@ -3,8 +3,10 @@
 
 int main(int argc, char* argw[])
 {
-    auto pair_1 = closest_pair_tonum(10);
-    std::cout<<"("<< pair_1.n  << " , " << pair_1.m << ")" << "\n";
-
+    while (std::cin >> number)
+    {
+        auto pair = closest_pair_tonum(number);
+    }
+    
     return 0;
 }
