@@ -1,4 +1,5 @@
 /home/daalginichev/Lab1/build/CMakeFiles/closest_pair_lib.dir
+/home/daalginichev/Lab1/build/CMakeFiles/closest_pair_tonum.dir
 /home/daalginichev/Lab1/build/CMakeFiles/test_closest_pair.dir
 /home/daalginichev/Lab1/build/CMakeFiles/edit_cache.dir
 /home/daalginichev/Lab1/build/CMakeFiles/rebuild_cache.dir

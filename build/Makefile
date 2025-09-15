@@ -175,6 +175,19 @@ closest_pair_lib/fast:
 .PHONY : closest_pair_lib/fast
 
 #=============================================================================
+# Target rules for targets named closest_pair_tonum
+
+# Build rule for target.
+closest_pair_tonum: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 closest_pair_tonum
+.PHONY : closest_pair_tonum
+
+# fast build rule for target.
+closest_pair_tonum/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/closest_pair_tonum.dir/build.make CMakeFiles/closest_pair_tonum.dir/build
+.PHONY : closest_pair_tonum/fast
+
+#=============================================================================
 # Target rules for targets named test_closest_pair
 
 # Build rule for target.
@@ -263,6 +276,30 @@ src/closest_pair_tonum.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/closest_pair_lib.dir/build.make CMakeFiles/closest_pair_lib.dir/src/closest_pair_tonum.cpp.s
 .PHONY : src/closest_pair_tonum.cpp.s
 
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/closest_pair_tonum.dir/build.make CMakeFiles/closest_pair_tonum.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/closest_pair_tonum.dir/build.make CMakeFiles/closest_pair_tonum.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/closest_pair_tonum.dir/build.make CMakeFiles/closest_pair_tonum.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
 test/main.o: test/main.cpp.o
 .PHONY : test/main.o
 
@@ -324,6 +361,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... closest_pair_lib"
+	@echo "... closest_pair_tonum"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"
@@ -332,6 +370,9 @@ help:
 	@echo "... src/closest_pair_tonum.o"
 	@echo "... src/closest_pair_tonum.i"
 	@echo "... src/closest_pair_tonum.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 	@echo "... test/main.o"
 	@echo "... test/main.i"
 	@echo "... test/main.s"

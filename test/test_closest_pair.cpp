@@ -3,7 +3,6 @@
 #include "closest_pair_tonum.h"
 
 TEST(ClosestPairTonumTest, BasicCases) {
-    // Тест из условия
     NumberPair result1 = closest_pair_tonum(10);
     EXPECT_EQ(result1.m, 5);    
     EXPECT_EQ(result1.n, 4);   
@@ -18,11 +17,7 @@ TEST(ClosestPairTonumTest, BasicCases) {
 }
 
 TEST(ClosestPairTonumTest, EdgeCases) {
-    // Для значений меньше 6 не существует подходящих пар
-    // Должны возвращать (0, 0) или бросать исключение
-    
     NumberPair result1 = closest_pair_tonum(5);
-    // Ожидаем специальное значение или проверяем исключение
     EXPECT_EQ(result1.m, 0);
     EXPECT_EQ(result1.n, 0);
     
@@ -31,7 +26,6 @@ TEST(ClosestPairTonumTest, EdgeCases) {
     EXPECT_EQ(result2.n, 0);
     
     NumberPair result3 = closest_pair_tonum(6);
-    // Для 6 уже должна существовать пара (5, 4)
     EXPECT_EQ(result3.m, 5);
     EXPECT_EQ(result3.n, 4);
 }
@@ -41,12 +35,10 @@ TEST(ClosestPairTonumTest, VerifyConditions) {
     for (int limit : test_limits) {
         NumberPair result = closest_pair_tonum(limit);
         
-        // Проверяем условия
         EXPECT_GT(limit, result.m);
         EXPECT_GT(result.m, result.n);
         EXPECT_GT(result.n, 0);
         
-        // Проверяем свойства совершенных квадратов
         int sum = result.m + result.n;
         int diff = result.m - result.n;
         
@@ -59,7 +51,6 @@ TEST(ClosestPairTonumTest, VerifyConditions) {
 }
 
 TEST(ClosestPairTonumTest, AdditionalCases) {
-    // Дополнительные проверки
     NumberPair result = closest_pair_tonum(100);
     EXPECT_GT(100, result.m);
     EXPECT_GT(result.m, result.n);
@@ -77,7 +68,6 @@ TEST(ClosestPairTonumTest, SumAndDifferenceArePerfectSquares) {
     int sum = result.m + result.n;
     int diff = result.m - result.n;
     
-    // Проверяем что оба числа - полные квадраты
     double sum_sqrt = std::sqrt(sum);
     double diff_sqrt = std::sqrt(diff);
     
